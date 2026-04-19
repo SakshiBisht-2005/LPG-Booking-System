@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Your Booking History</h2>
+
+<table>
+    <tr>
+        <th>Date</th>
+        <th>Status</th>
+        <th>Delivery Date</th>
+    </tr>
+
+    {% for booking in bookings %}
+    <tr>
+        <td>{{ booking.booking_date }}</td>
+        <td class="{{ booking.status|lower }}">{{ booking.status }}</td>
+        <td>{{ booking.delivery_date }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

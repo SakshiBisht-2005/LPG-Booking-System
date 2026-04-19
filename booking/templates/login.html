@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="hero">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkZV4-m-ex87IZvZGKR1MxUws7FA0PZf79OQ&s">
+</div>
+
+<div class="form-box">
+    <h2>Login with Email</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <button class="btn">Send OTP</button>
+    </form>
+</div>
+
+{% endblock %}

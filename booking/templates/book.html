@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="form-box">
+    <h2>Book LPG Cylinder</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+        <textarea name="address" placeholder="Enter your address" required></textarea>
+        <button class="btn">Book Now</button>
+    </form>
+    {% if error %}
+    <p class="error">{{ error }}</p>
+    {% endif %}
+</div>
+
+{% endblock %}
